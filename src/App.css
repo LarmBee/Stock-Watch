@@ -1,38 +1,128 @@
+body{
+  overflow: hidden;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: inline-flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container{
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+}
+.child-container{
+  width: 40%;
+  padding: 10% 2%;
+}
+.child-container-register{
+  width: 40%;
+  padding: 6% 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-image{
+  width: 50%;
+  height: 100vh;
+  float: right;
+  position: absolute;
+  top: 1px;
+  right: 4%;
+
+}
+
+.image-log{
+  height: 96%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 5px;
+}
+
+.register-button{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: black;
+  
+}
+.navigation-container{
+  height: 10vh;
+  fl: right;
+}
+
+.sidebar{
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+.content-container{
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  top: 10vh;
+  right: 0%;
+}
+
+.user-logo{
+  height: 40px;
+}
+
+.navigation-items{
+  float: right;
+  margin: 20px 10px;
+  padding-left: 20px;
+}
+
+.icons{
+  width: 28px;
+  height: 40px;
+}
+.search{
+  border: 2px solid black;
+  width: 30em;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.search-label{
+  margin: 10px;
+}
+table,th,td{
+  border: 2px solid black;
+  color: white;
+}
+
+.search-container{
+  width: 50%;
+  align-items: center;
+  margin: 200px auto;
+}
+
+.result-container{
+  width: 50%;
+  text-align: left;
+}
+
+.search_button{
+  height: 50px;
+}
+
+.logo{
+  height: 7em;
+  width: 7em;
+  margin: 10px;
+
+}
+.line{
+  border: 2px solid white;
+  margin: 10px;
+}
+.google{
+  margin-left: 15px;
 }
