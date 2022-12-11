@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import stock from "../images/stock.jpg";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
 import {
 	auth,
 	registerWithEmailAndPassword,
@@ -17,7 +17,19 @@ const Register = () => {
 	const [password, setPassword] = useState("");
 	const [name, setName] = useState("");
 	const [user, loading, error] = useAuthState(auth);
+	const [image, setImage] = useState("")
 	const history = useNavigate();
+
+	console.log(image);
+	
+	const nav = () => {
+		history("/Login");
+	};
+
+	const setProfile = (e) =>{
+		console.log(e.target.files);
+        setImage(URL.createObjectURL(e.target.files[0]));
+	}
 	const register = () => {
 		if (!name) alert("Please enter name");
 		registerWithEmailAndPassword(name, email, password);
@@ -51,6 +63,11 @@ const Register = () => {
 							type="text"
 							placeholder="Enter your username"
 						/>
+					</Form.Group>
+
+					<Form.Group>
+						<Form.Label>Image</Form.Label>
+						<Form.Control type="file" id="imageFile" name="imageFile" onChange={setProfile}/>
 					</Form.Group>
 
 					{/* Email form group */}
@@ -95,10 +112,17 @@ const Register = () => {
 			</div>
 			<div className="login-image">
 				<img className="image-log" src={stock} />
-				<Button variant="dark" className="register-button" type="submit">
+				<Button
+					variant="dark"
+					className="register-button"
+					type="submit"
+					onClick={nav}
+				>
 					Login
 				</Button>
 			</div>
+
+			<img src={image}/>
 		</div>
 	);
 };

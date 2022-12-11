@@ -3,11 +3,12 @@ import "../App.css";
 import Button from "react-bootstrap/Button";
 import { BiUser } from "react-icons/bi";
 import { BiBellPlus } from "react-icons/bi";
+import {logout,auth, db} from "../firebase";
+import man from "../images/man.png"
 
 const Landing = () => {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
 	const [stock, setStock] = useState("AAPL");
 
 	const api = `${data?.branding.icon_url}?apiKey=r5oV7vG4aDi6H0oysKHuCjUZ_5s3xSmX`;
@@ -34,6 +35,12 @@ const Landing = () => {
 
 	return (
 		<>
+			<section className="na">
+			<img classname="profilea"src={man}/>
+			<Button variant="danger" type="submit" className="logout-button" onClick={logout} >
+						LogOut
+			</Button>
+			</section>
 			<div className="App">
 				<div className="search-container">
 					{loading && <p>Loading...</p>}

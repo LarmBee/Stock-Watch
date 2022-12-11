@@ -16,7 +16,9 @@ const Login = () => {
 	const [password, setPassword] = useState("");
 	const [user, loading, error] = useAuthState(auth);
 
-
+	const nav = (()=>{
+		navigate("/Register");
+	})
 
 	const handleChange = (event) => {
 		setUserMain(event.target.value);
@@ -86,7 +88,7 @@ const Login = () => {
 			</div>
 			<div className="login-image">
 				<img className="image-log" src={stock} />
-				<Button variant="dark" className="register-button" type="submit">
+				<Button variant="dark" className="register-button" type="submit" onClick={nav}>
 					Register
 				</Button>
 			</div>
