@@ -76,9 +76,9 @@ const Login = () => {
 					</Form.Group>
 
 					{/* Button  */}
-					<Button variant="primary" type="submit" onClick={()=>logInWithEmailAndPassword(email, password)}>
+					<Button variant="primary"className="logbtn" type="submit" onClick={()=>logInWithEmailAndPassword(email, password)}>
 						Log in
-					</Button>
+					</Button><br/>
 					<Button variant="danger" type="submit" className="google"onClick={signInWithGoogle}>
 						Login with Google
 					</Button>
