@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import { initializeApp } from "firebase/app";
 import {GoogleAuthProvider,getAuth,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendPasswordResetEmail,signOut} from "firebase/auth";
 import { getFirestore, collection, addDoc, where, query, getDocs} from "firebase/firestore"
+import { Navigate } from "react-router-dom";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBALSp_B56nM20FsI7ggxRsej4vaJrCyX0",
@@ -69,7 +70,13 @@ const sendPasswordReset = async (email) => {
   }
 };
 const logout = () => {
-  signOut(auth);
+  signOut(auth).then(()=>{
+    Navigate("/login")
+    console.log("logged out");
+  }).catch((error)=>{
+    alert("error logging out")
+  })
+  
 };
 export {
   auth,
