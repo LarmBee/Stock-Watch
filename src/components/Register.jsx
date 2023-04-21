@@ -102,10 +102,10 @@ const Register = () => {
 					</Form.Group>
 
 					{/* Button  */}
-					<Button variant="primary" type="submit" onClick={register}>
+					<Button variant="primary" type="submit" className="register-btn" onClick={register}>
 						Create Account
 					</Button>
-					<Button variant="danger" type="submit" onClick={register}>
+					<Button variant="danger" type="submit" className="google-register" onClick={register}>
 						Register With Google
 					</Button>
 				</Form>
