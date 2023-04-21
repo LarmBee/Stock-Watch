@@ -133,7 +133,6 @@ th, tr{
   margin: 10px;
 }
 .google{
-  margin-left: 15px;
   margin-top: 10px;
 }
 
@@ -155,7 +154,9 @@ img  {
   height: 54px;
   width: 48px;
   float: right;
-  border: 2px solid black;
   border-radius: 14px;
   margin:0 5px;
+}
+.register-btn{
+  margin-right: 5px;
 }
