@@ -1,5 +1,5 @@
 *{
-  overflow: hidden;
+  overflow: auto;
 }
 body{
   overflow: hidden;
@@ -133,9 +133,8 @@ th, tr{
   margin: 10px;
 }
 .google{
+  margin-left: 15px;
   margin-top: 10px;
-  margin-left: 3px;
-  float: left;
 }
 
 .logout-button{
@@ -152,14 +151,11 @@ th, tr{
   width: 20px;
   height: 20px;
 }
-img, svg {
+img  {
   height: 54px;
   width: 48px;
   float: right;
+  border: 2px solid black;
   border-radius: 14px;
   margin:0 5px;
-}
-
-.register-btn{
-  margin-right: 10px;
 }

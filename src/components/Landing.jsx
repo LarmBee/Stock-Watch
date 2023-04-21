@@ -36,7 +36,6 @@ const Landing = () => {
 	return (
 		<>
 			<section className="na">
-			<img classname="profilea"src={man}/>
 			<Button variant="danger" type="submit" className="logout-button" onClick={logout} >
 						LogOut
 			</Button>
@@ -53,6 +52,7 @@ const Landing = () => {
 						placeholder="Enter ticker symbol"
 						className="search"
 						onChange={handleChange}
+						defaultValue="AAPL"
 					></input>
 					<Button
 						variant="primary"
