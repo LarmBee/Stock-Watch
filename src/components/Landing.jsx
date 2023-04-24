@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import Button from "react-bootstrap/Button";
 import { BiUser } from "react-icons/bi";
 import { BiBellPlus } from "react-icons/bi";
-import {logout,auth, db} from "../firebase";
-import man from "../images/man.png"
+import { logout, auth, db } from "../firebase";
+import { Navigate } from "react-router-dom";
 
 const Landing = () => {
 	const [data, setData] = useState(null);
@@ -17,6 +18,13 @@ const Landing = () => {
 		setStock(event.target.value.toUpperCase());
 		console.log("value is:", event.target.value);
 	};
+
+	const logout = (()=>{
+		navigate("/Login");
+		return;
+	})
+
+	const navigate =useNavigate()
 
 	const fetchData = () => {
 		fetch(
@@ -35,17 +43,17 @@ const Landing = () => {
 
 	return (
 		<>
-			<section className="na">
-			<Button variant="danger" type="submit" className="logout-button" onClick={logout} >
-						LogOut
-			</Button>
-			</section>
 			<div className="App">
+			<Button
+					variant="danger"
+					type="submit"
+					className="logout-button"
+					onClick={logout}
+				>
+					LogOut
+				</Button>
 				<div className="search-container">
 					{loading && <p>Loading...</p>}
-					<label>
-						<u>INPUT STOCK TICKER</u>
-					</label>
 					<br />
 					<input
 						type="text"
@@ -59,13 +67,14 @@ const Landing = () => {
 						type="submit"
 						className="search_button"
 						onClick={fetchData}
+						placeholder="Enter Ticker Symbol"
 					>
 						Search
 					</Button>
 				</div>
-				<hr className="line" />
+
 				<div className="result-container">
-					<img src={api} className="logo" />
+					<h1>{data?.name}</h1>
 					<table className="table">
 						<tr>
 							<th>Company</th>
@@ -78,8 +87,9 @@ const Landing = () => {
 							<td>{data?.market_cap}</td>
 						</tr>
 					</table>
+					<img src={api} className="logo" />
 					<h3>Company Description</h3>
-					<p>{data?.description ? data?.description : "Data Not Found"}</p>
+					<p className="company-description">{data?.description ? data?.description : "Data Not Found"}</p>
 					<h3>Company Main Page</h3>
 					<a href={data?.homepage_url} target="_blank">
 						{data?.homepage_url}

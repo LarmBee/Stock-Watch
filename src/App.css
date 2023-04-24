@@ -1,12 +1,12 @@
 *{
   overflow: auto;
+  font-family: sans-serif;
 }
 body{
   overflow: hidden;
 }
 .App {
   text-align: center;
-  display: inline-flex;
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -89,7 +89,7 @@ body{
 }
 .search{
   border: 2px solid black;
-  width: 100%;
+  width: 45em;
   height: 50px;
   border-radius: 10px;
   margin: 10px;
@@ -108,13 +108,15 @@ th, tr{
 }
 
 .search-container{
-  width: 50%;
+  width: 100%;
+  margin: 10px;
   align-items: center;
   margin: auto auto;
+  overflow: hidden;
 }
 
 .result-container{
-  width: 50%;
+  width: 100%;
   text-align: left;
 }
 
@@ -123,27 +125,26 @@ th, tr{
 }
 
 .logo{
-  height: 20%;
-  width: 20%;
-  margin-top: 10px;
+  height: 1%;
+  width: 25%;
+  margin-top: 1px;
+  margin-right: 20px;
 
 }
-.line{
-  border: 2px solid white;
-  margin: 10px;
-}
+
 .google{
   margin-top: 10px;
 }
 
 .logout-button{
   float: right;
-  margin: 5px;
+  margin: 15px;
 }
 
 .na{
   background-color: black;
-  border: 2px white solid;
+  color: white;
+  margin-right: 15px;
   width: 100vw;
 }
 .profilea{
@@ -159,4 +160,8 @@ img  {
 }
 .register-btn{
   margin-right: 5px;
+}
+.company-description{
+  width: 50%;
+  word-wrap: break-word;
 }
