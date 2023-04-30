@@ -6,6 +6,7 @@ import { BiUser } from "react-icons/bi";
 import { BiBellPlus } from "react-icons/bi";
 import { logout, auth, db } from "../firebase";
 import { Navigate } from "react-router-dom";
+import Home from "./Home";
 
 const Landing = () => {
 	const [data, setData] = useState(null);
@@ -43,6 +44,7 @@ const Landing = () => {
 
 	return (
 		<>
+			<Home/>
 			<div className="App">
 			<Button
 					variant="danger"

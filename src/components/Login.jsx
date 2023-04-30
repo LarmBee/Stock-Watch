@@ -8,9 +8,10 @@ import Form from "react-bootstrap/Form";
 import "../App.css";
 import stock from "../images/stock.jpg";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
+import Home from "./Home";
 
 
-const Login = () => {
+const Login = (props) => {
 	const [usermain, setUserMain] = useState("User");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -39,6 +40,7 @@ const Login = () => {
 			<div className="child-container ">
 				<Form>
 					<h1>Hello,{usermain}!</h1>
+					<Home username={usermain}/>
 					{/* Username section */}
 					<Form.Group className="mb-2" controlId="Username">
 						<Form.Label>Username</Form.Label>

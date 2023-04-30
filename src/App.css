@@ -2,9 +2,7 @@
   overflow: auto;
   font-family: sans-serif;
 }
-body{
-  overflow: hidden;
-}
+
 .App {
   text-align: center;
   width: 100vw;
