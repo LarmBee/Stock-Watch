@@ -10,7 +10,6 @@ import Home from "./Home";
 
 const Landing = () => {
 	const [data, setData] = useState(null);
-	const [loading, setLoading] = useState(true);
 	const [stock, setStock] = useState("AAPL");
 
 	const api = `${data?.branding.icon_url}?apiKey=r5oV7vG4aDi6H0oysKHuCjUZ_5s3xSmX`;
@@ -34,7 +33,6 @@ const Landing = () => {
 			.then((response) => response.json())
 			.then((usefulData) => {
 				console.log(usefulData);
-				setLoading(false);
 				setData(usefulData?.results);
 			})
 			.catch((e) => {
@@ -46,16 +44,8 @@ const Landing = () => {
 		<>
 			<Home/>
 			<div className="App">
-			<Button
-					variant="danger"
-					type="submit"
-					className="logout-button"
-					onClick={logout}
-				>
-					LogOut
-				</Button>
+			
 				<div className="search-container">
-					{loading && <p>Loading...</p>}
 					<br />
 					<input
 						type="text"

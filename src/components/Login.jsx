@@ -39,8 +39,8 @@ const Login = (props) => {
 		<div className="main-container">
 			<div className="child-container ">
 				<Form>
-					<h1>Hello,{usermain}!</h1>
-					<Home username={usermain}/>
+					<h1>Hello,Brandon!</h1>
+					
 					{/* Username section */}
 					<Form.Group className="mb-2" controlId="Username">
 						<Form.Label>Username</Form.Label>
