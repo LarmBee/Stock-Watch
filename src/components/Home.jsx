@@ -29,7 +29,7 @@ const Home = (props) => {
           <p className="text-7xl mt-12 pl-28 overflow-hidden">Streamline</p>
           <p className="text-7xl ml-8 pl-28 overflow-hidden">your</p>
           <p className="text-7xl ml-16 pl-28 text-teal-200 overflow-hidden">portfolio</p>
-          <p className="text-3xl pl-28 mt-12">Welcome to StockMinder</p>
+          <p className="text-3xl pl-28 mt-12 overflow-hidden">Welcome to StockMinder</p>
           <p className="text-2xl pl-28 mt-2">Discover real-time stock information at your fingertips.<br/> StockView is your go-to app for tracking and analyzing <br/>stock data from a wide range of sources</p>
 
           <button className="ml-28 mt-4 w-40 bg-blue-500 text-white font-bold py-2 px-4 rounded" onClick={handleButtonClick}>
